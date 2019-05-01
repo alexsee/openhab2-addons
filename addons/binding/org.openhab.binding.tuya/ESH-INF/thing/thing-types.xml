@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="tuya"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Socket Thing Type -->
+	<thing-type id="wifiSocket">
+		<label>Tuya Wifi Socket</label>
+		<description>Supports Tuya Wifi Socket.</description>
+
+		<channels>
+			<channel id="switch" typeId="switch" />
+		</channels>
+
+		<config-description>
+			<parameter name="hostAddress" type="text" required="true">
+				<label>Host address</label>
+				<context>network-address</context>
+				<description>The socket Host address. The binding is able to discover the host address.</description>
+			</parameter>
+			<parameter name="tuyaId" type="text" required="true">
+				<label>Tuya Id</label>
+				<description>The socket Tuya Id.</description>
+			</parameter>
+			<parameter name="tuyaKey" type="text" required="true">
+				<label>Tuya Key</label>
+				<description>The Tuya Key of the device.</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Socket type Channel Type -->
+	<channel-type id="switch">
+		<item-type>Switch</item-type>
+		<label>Socket Switch</label>
+		<category>Switch</category>
+	</channel-type>
+</thing:thing-descriptions>
