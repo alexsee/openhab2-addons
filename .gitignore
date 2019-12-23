@@ -21,3 +21,6 @@ features/**/src/main/feature
 
 .vscode
 .factorypath
+.project
+.classpath
+.settings
