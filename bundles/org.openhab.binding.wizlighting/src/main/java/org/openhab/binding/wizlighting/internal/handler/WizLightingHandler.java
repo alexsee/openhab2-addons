@@ -129,7 +129,7 @@ public class WizLightingHandler extends BaseThingHandler {
                     }
                 } else if (command instanceof PercentType) {
                     if (sendRequestPacket(WizLightingMethodType.setPilot, new DimmingRequestParam(command))) {
-                        updateState(WizLightingBindingConstants.BULB_COLOR_CHANNEL_ID, (HSBType) command);
+                        updateState(WizLightingBindingConstants.BULB_COLOR_CHANNEL_ID, (PercentType) command);
                     }
                 } else if (command instanceof OnOffType) {
                     if (sendRequestPacket(WizLightingMethodType.setPilot, new StateRequestParam((OnOffType) command))) {
